@@ -39,7 +39,7 @@ Area chart,Data chart,Line chart등 다양한 종류의 차트를 지원
 3. Dashboard   
 Visualize를 통해 시각화된 객체를 모아 하나의 Dashboard에 배치하여 한눈에 볼 수 있게 해줌.
 
-4. Setttings
+4. Setttings  
 데이터 시각화에 대한 모든 설정을 변경
 
 
