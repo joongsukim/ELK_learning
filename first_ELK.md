@@ -16,10 +16,10 @@
  Elastic Search를 구성하는 단위 프로세스
  역할에 따라 Master-eiligible, Data,Ingest,Tribe노드로 구분 가능
 
- 3. Index /Shard/Replica
- index는 관계형 데이터베이스 관리 시스템의 index와 동일
- sharding은 데이터를 분산해서 저장하는 방법을 의미하며 한개의 인덱스를 다수의 shard로 나눔
- replica는 또 다른 형태의 shard로써 노드를 손실했을 경우 데이터의 신뢰성을 위해 샤드들을 복제 
+ 3. Index/Shard/Replica
+ index는 관계형 데이터베이스 관리 시스템의 index와 동일  
+ sharding은 데이터를 분산해서 저장하는 방법을 의미하며 한개의 인덱스를 다수의 shard로 나눔  
+ replica는 또 다른 형태의 shard로써 노드를 손실했을 경우 데이터의 신뢰성을 위해 샤드들을 복제   
 
 
 ## **Logstash**
