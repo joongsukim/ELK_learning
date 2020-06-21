@@ -9,17 +9,14 @@
 
  **구조**
  1. Cluster
- 
  가장 큰 시스템 단위로 1개 이상의 노드로 이루어진 노드의 집합
  각각의 클러스터는 데이터의 접근과 교환을 할 수 없는 독립적인 시스템
 
  2. Node
- 
  Elastic Search를 구성하는 단위 프로세스
  역할에 따라 Master-eiligible, Data,Ingest,Tribe노드로 구분 가능
 
  3. Index /Shard/Replica
- 
  index는 관계형 데이터베이스 관리 시스템의 index와 동일
  sharding은 데이터를 분산해서 저장하는 방법을 의미하며 한개의 인덱스를 다수의 shard로 나눔
  replica는 또 다른 형태의 shard로써 노드를 손실했을 경우 데이터의 신뢰성을 위해 샤드들을 복제 
@@ -33,20 +30,16 @@
 간단하게 말하면 Elastic Search에 저장되는 모든 데이터를 즉각적으로 시각화하는 도구이다. 
 주요 기능:
 1. Discover
-
 Elastic Search에서 저장된 데이터를 한눈에 확인할 수 있는 메인페이지
 
 2. Visualize
-
 Elastic Search에서 수집된 결과를 시각화하여 표현 
 Area chart,Data chart,Line chart등 다양한 종류의 차트를 지원
 
 3. Dashboard 
-
 Visualize를 통해 시각화된 객체를 모아 하나의 Dashboard에 배치하여 한눈에 볼 수 있게 해줌.
 
 4. Setttings
-
 데이터 시각화에 대한 모든 설정을 변경
 
 
