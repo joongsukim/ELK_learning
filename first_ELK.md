@@ -65,7 +65,7 @@
  <img width="1496" alt="pretty 전" src="https://user-images.githubusercontent.com/60679342/85474525-c4b18180-b5ef-11ea-9606-5a8ba95c8e50.png">
 
 
- pretty 옵션 넣은 후   
+   pretty 옵션 넣은 후   
  <img width="891" alt="pretty 후 " src="https://user-images.githubusercontent.com/60679342/85474600-e579d700-b5ef-11ea-8a61-318977888954.png">
  
  
