@@ -33,6 +33,10 @@
  
  4. Put  
  관계형 db의 update와 같은 기능이다. 새로운 문서를 추가시키거나 인덱스를 수정시킬때 사용한다 .
+ 
+ **실습**  
+ - curl -XGET http://localhost:9200/classes?pretty
+   
 
 
 ## **Logstash**
