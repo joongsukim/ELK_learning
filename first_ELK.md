@@ -70,8 +70,9 @@
  
  
  
- - -6버전부터 명령어에  헤더에 타입이 없으면 에러가 발생
-   
+ - -6버전부터 명령어에  헤더에 타입이 없으면 에러가 발생  
+   <img width="1230" alt="header 표시" src="https://user-images.githubusercontent.com/60679342/85475887-e0b62280-b5f1-11ea-9604-63cb83284f81.png">
+    -H 'Content-Type: application/json'을 curl 명령 뒤에 삽입시켜줘야함   
    
 
 
