@@ -36,6 +36,37 @@
  
  **실습**  
  - curl -XGET http://localhost:9200/classes?pretty
+   classes 라는 인덱스를 조회  
+   
+ - curl -XPUT http://loclahost:9200/classes  
+   classses라는 인덱스를 생성 
+   
+ - curl -XDELETE http://localhost:9200/classes  
+   classes라는 인덱스를 삭제
+   
+ - curl -XPOST http://localhost:9200/classes/class/1/ -d ‘{“title”:”haam”,”professor”:”lee”}' -H 'Content-Type: application/json'
+   classes 라는 인덱스의 class type에 (id는 1) 문서를 삽입  
+   기존에 있던 문서로 삽입시키고 싶으면 -d 옵션 뒤에 @해당파일의 경로를 입력하면 됨    
+   -d 옵션은 data-binary의 약자로 추가할 데이터 파일의 형식을 나타냄
+ 
+ - curl -XUPDATE http://localhost:9200/classes/class/1/update -H 'Content-Type: application/json' -d ' {"script: "ctx.source.unit +=5"} '
+   기존에 있던 인텍스 타입의 unit값을 5 증가시킴 
+   위는 script로 수정했을 경우이고 {"doc": {"unit:1"}} 식으로 직접 넣는 방법도 있다 
+   
+   
+ 
+ 
+ 
+ 
+ **실습 할때 tip**
+ 
+ - 데이터를 조회할때 ?pretty 옵션을 넣으면 정렬된 형식으로 확인가능
+ 
+ 
+ 
+ 
+ - -6버전부터 명령어에  헤더에 타입이 없으면 에러가 발생
+   
    
 
 
