@@ -57,10 +57,13 @@
 
  -Bulk 는 한번에 여러개의 파일을 es에 저장할때 사용
  
+ -Bulk file은 특정 class,type,user로 저장하라는 metadata 영역과 저장할 필드 값들이 저장
+ 
  Bulk file 들여오는 코드 
  <img width="1081" alt="bulk file 들여오기" src="https://user-images.githubusercontent.com/60679342/85487060-cdfa1880-b606-11ea-8286-1c0fc1f43145.png">
  
  -옵션에 _bulk를 붙이면 된다 
+ 
  
    
    
@@ -80,7 +83,9 @@
  
  - -6버전부터 명령어에  헤더에 타입이 없으면 에러가 발생  
    <img width="1230" alt="header 표시" src="https://user-images.githubusercontent.com/60679342/85475887-e0b62280-b5f1-11ea-9604-63cb83284f81.png">
-    -H 'Content-Type: application/json'을 curl 명령 뒤에 삽입시켜줘야함   
+    -H 'Content-Type: application/json'을 curl 명령 뒤에 삽입시켜줘야함  
+    
+- multisearch나 bulk파일을 인덱스에 추가시킬 경우 -d 옵션의 full name인 --data-binary을 써줘야함(-d를 사용할 경우 오류 발생 ) 
    
 
 
