@@ -59,9 +59,10 @@
    기존에 있던 문서로 삽입시키고 싶으면 -d 옵션 뒤에 @해당파일의 경로를 입력하면 됨    
    -d 옵션은 data-binary의 약자로 추가할 데이터 파일의 형식을 나타냄
  
- - curl -XUPDATE http://localhost:9200/classes/class/1/update -H 'Content-Type: application/json' -d ' {"script: "ctx.source.unit +=5"} '
+ - curl -XPOST http://localhost:9200/classes/class/1/update -H 'Content-Type: application/json' -d ' {"script: "ctx.source.unit +=5"} '
    기존에 있던 인텍스 타입의 unit값을 5 증가시킴 
-   위는 script로 수정했을 경우이고 {"doc": {"unit:1"}} 식으로 직접 넣는 방법도 있다 
+   위는 script로 수정했을 경우이고 {"doc": {"unit:1"}} 식으로 직접 넣는 방법도 있다   
+   ctx는 매개변수인데 ctx._source는 doc본문을 의미 
    
  **BULK** 
 
@@ -82,6 +83,10 @@
 -맵핑을 안할 경우 예를 들어 어떤 데이터를 넣을때  날짜 데이터를 문자열로 인식할 수 있는 오류가 생길 수 있음 
 
 -curl -XPUT 'http://localhost:9200/classes/class/_mapping?pretty -d @classesRating_mapping.json -H 'Content-Type:application/json'
+
+-동적 mapping vs 정적 mapping  
+ 동적 mapping은 data type을 지정하지 않고 동적으로 es에서 적절한 type을 지정해주는 기능이다. 하지만 자동 매핑을 적절하지 않은 매핑을 만들 수 있으므로 정적 mapping을 통해서 사전에 정의해주어야한   다.
+ 
 
 
 **search**
