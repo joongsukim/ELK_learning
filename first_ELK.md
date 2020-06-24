@@ -53,7 +53,7 @@
    기존에 있던 인텍스 타입의 unit값을 5 증가시킴 
    위는 script로 수정했을 경우이고 {"doc": {"unit:1"}} 식으로 직접 넣는 방법도 있다 
    
-   **BULK** 
+ **BULK** 
 
  -Bulk 는 한번에 여러개의 파일을 es에 저장할때 사용
  
@@ -69,6 +69,8 @@
 
 -맵핑은 관계형 db의 shcema와 같음 
 
+-맵핑을 안할 경우 예를 들어 어떤 데이터를 넣을때  날짜 데이터를 문자열로 인식할 수 있는 오류가 생길 수 있음 
+
 
 **search**
 
@@ -79,6 +81,11 @@
 -curl -XGET 'localhost:9200/basketball/record/_search?q=points:30&pretty'
  
  points가 30점인것만 나타나게 하는 쿼리를 붙이면 해당되는 문서들만 검색 
+ 
+ **metric aggregation**
+ 
+ -최댓값,최솟값,평균,합계 등의 산술적 계산을 하는 기능
+ 
   
  **실습 할때 tip**
  
