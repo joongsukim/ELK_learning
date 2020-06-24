@@ -99,6 +99,30 @@
  
  points가 30점인것만 나타나게 하는 쿼리를 붙이면 해당되는 문서들만 검색 
  
+-Query context는 얼마나 적합한지에 따라서 점수를 부여함
+
+-Filter context는 일치의 유무에 따라 true or false로 나뉨
+
+
+{  
+  "query": {   
+    "bool": {   
+      "must": [  
+        { "match": { "title":   "Search" }},   
+        { "match": { "content": "Elasticsearch" }}    
+      ],  
+      "filter": [   
+        { "term":  { "status": "published" }},   
+        { "range": { "publish_date": { "gte": "2015-01-01" }}}   
+      ]  
+    }  
+  }  
+}  
+
+Must 일치하는 문서에 나와야하며 점수에 기여  
+Filter 은 일치하는 문서에 나와야하지만 점수에 기여하지 않음  
+
+ 
  
  **metric aggregation**
  
