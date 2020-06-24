@@ -84,10 +84,23 @@
  
  points가 30점인것만 나타나게 하는 쿼리를 붙이면 해당되는 문서들만 검색 
  
+ 
  **metric aggregation**
  
  -최댓값,최솟값,평균,합계 등의 산술적 계산을 하는 기능
  
+ -기능을 사용하기 전에 산술 계산을 하기 위한 json파일을 생성
+  "aggregations" : {
+         "<aggregation_name>" : {     -----> 
+            "<aggregation_type>" : {     ---> avg ,min ,max,sum 등등 
+               <aggregation_body>    ----> 어떤 필드의 값을 사용할 것인지 명시 
+            }
+ 
+ **bucket aggregation**
+ 
+ -조건에 해당하는 문서를 버킷이라는 저장소 단위로 담아 새로운 집합을 생성 
+ 
+ -관계형 db
   
  **실습 할때 tip**
  
@@ -110,6 +123,8 @@
 
 
 - string type대신 text형식을 써야함
+
+
    
 
 
