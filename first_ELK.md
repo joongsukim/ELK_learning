@@ -71,6 +71,8 @@
 
 -맵핑을 안할 경우 예를 들어 어떤 데이터를 넣을때  날짜 데이터를 문자열로 인식할 수 있는 오류가 생길 수 있음 
 
+-curl -XPUT 'http://localhost:9200/classes/class/_mapping?pretty -d @classesRating_mapping.json -H 'Content-Type:application/json'
+
 
 **search**
 
@@ -102,6 +104,10 @@
     -H 'Content-Type: application/json'을 curl 명령 뒤에 삽입시켜줘야함  
     
 - multisearch나 bulk파일을 인덱스에 추가시킬 경우 -d 옵션의 full name인 --data-binary을 써줘야함(-d를 사용할 경우 오류 발생 ) 
+
+- 맵핑을 할경우 맵핑하려는 필드중에서 type이 string인 경우 아래와 같은 오류가 생김 
+
+- string type대신 text형식을 써야함
    
 
 
