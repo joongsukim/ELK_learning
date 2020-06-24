@@ -65,12 +65,21 @@
  -옵션에 _bulk를 붙이면 된다 
  
  
-   
-   
+**mapping**
+
+-맵핑은 관계형 db의 shcema와 같음 
+
+
+**search**
+
+-curl -XGET http://localhost:9200/basketball/record/_search?pretty
+
+  basketball index의 record table을 _search옵션을 통해서 검색 
+  
+-curl -XGET 'localhost:9200/basketball/record/_search?q=points:30&pretty'
  
- 
- 
- 
+ points가 30점인것만 나타나게 하는 쿼리를 붙이면 해당되는 문서들만 검색 
+  
  **실습 할때 tip**
  
  - 데이터를 조회할때 ?pretty 옵션을 넣으면 정렬된 형식으로 확인가능  
