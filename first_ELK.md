@@ -132,11 +132,11 @@ Filter 은 일치하는 문서에 나와야하지만 점수에 기여하지 않�
  
  -숫자또는 날짜 필드의 값을 이용하는 aggregation은 metrics aggregation , 범위나 keyword 값을 이용해서 문서들을 그룹화시키는 aggregation은 bucket aggregation
  
- -기능을 사용하기 전에 산술 계산을 하기 위한 json파일을 생성
-  "aggregations" : {  -----> aggregation 이나 aggs 
-         "<aggregation_name>" : {     ----->   
-            "<aggregation_type>" : {     ---> avg ,min ,max,sum 등등   
-               <aggregation_body>    ----> 어떤 필드의 값을 사용할 것인지 명시   
+ -기능을 사용하기 전에 산술 계산을 하기 위한 json파일을 생성  
+  "aggregations" : {  -----> aggregation 이나 aggs   
+         "<aggregation_name>" : {     ----->     
+            "<aggregation_type>" : {     ---> avg ,min ,max,sum 등등     
+               <aggregation_body>    ----> 어떤 필드의 값을 사용할 것인지 명시     
             }  
             
  -stats을 사용하면 avg,min,max,sum등의 결과 값들을 가져옴
