@@ -142,7 +142,7 @@
 
    string type대신 text형식을 써야함  
    
-- aggregations만 사용할때 "size: 0"을 지정하면 hits에 불필요한 문서    
+- aggregations만 사용할때 "size: 0"을 지정하면 hits에 불필요한 문서   
 
 - put vs post  
   put은 자원의 식별자를 알고 있을때 사용하고 post는 자원의 식별자를 모를때 사용한다.둘다 새로운 자원을 생성하는 것은 같지만 예를 들어 두개의 동일한 요청을 할 경우 post는 식별자가 없으므로 두개의 새로
