@@ -57,6 +57,11 @@
 
  -Bulk 는 한번에 여러개의 파일을 es에 저장할때 사용
  
+ Bulk file 들여오는 코드 
+ <img width="1081" alt="bulk file 들여오기" src="https://user-images.githubusercontent.com/60679342/85487060-cdfa1880-b606-11ea-8286-1c0fc1f43145.png">
+ 
+ -옵션에 _bulk를 붙이면 된다 
+ 
    
    
  
