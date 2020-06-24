@@ -7,6 +7,13 @@
 ## **Elastic Search**
 아파치 루신을 기반으로 만든 분산 검색엔진으로 깃허브, 이베이, 가디언 같은 기업이 엘라스틱서치 기술로 내부 검색 기능을 구축했다.정형,비정형,위치정보,메트릭 등 원하는 방법으로 다양한 유형의 검색을 수행하고 결합할 수 있다. JSON 문서 형태로 데이터를 저장하며 각 문서는 일련의 키와 그에 해당되는 값을 서로 연결한다.
 
+**REST API지원**
+
+-es는 rest api지원함 
+-rest api를 지원하지 않는 시스템은 crud에 대해서 각기 다른 url로 접근하거나 명령을 매개변수로 처리
+-rest api를 지원하는 시스템은 crud에 대해서 단일 url로 접근하고 put,get,delete과 같은 http method로 데이터 처리 
+-elastic search의 경우 우분투위에서 실행할 것이므로 curl명령어를 앞에 사용해야
+
  **구조**
  1. Cluster  
  가장 큰 시스템 단위로 1개 이상의 노드로 이루어진 노드의 집합  
@@ -33,6 +40,7 @@
  
  4. Put  
  관계형 db의 update와 같은 기능이다. 새로운 문서를 추가시키거나 인덱스를 수정시킬때 사용한다 .
+ 
  
  **실습**  
  - curl -XGET http://localhost:9200/classes?pretty
@@ -89,18 +97,25 @@
  
  -최댓값,최솟값,평균,합계 등의 산술적 계산을 하는 기능
  
+ -aggregation들은 따로 구분은 하지 않음
+ 
+ -숫자또는 날짜 필드의 값을 이용하는 aggregation은 metrics aggregation , 범위나 keyword 값을 이용해서 문서들을 그룹화시키는 aggregation은 bucket aggregation
+ 
  -기능을 사용하기 전에 산술 계산을 하기 위한 json파일을 생성
   "aggregations" : {  -----> aggregation 이나 aggs 
          "<aggregation_name>" : {     ----->   
             "<aggregation_type>" : {     ---> avg ,min ,max,sum 등등   
                <aggregation_body>    ----> 어떤 필드의 값을 사용할 것인지 명시   
             }  
- 
+            
+ -stats을 사용하면 avg,min,max,sum등의 결과 값들을 가져옴
  **bucket aggregation**
  
  -조건에 해당하는 문서를 버킷이라는 저장소 단위로 담아 새로운 집합을 생성 
  
  -관계형 db의 groupby 
+ 
+ 
   
  **실습 할때 tip**
  
@@ -121,8 +136,9 @@
 - 맵핑을 할경우 맵핑하려는 필드중에서 type이 string인 경우 아래와 같은 오류가 생김   
 ![Screenshot from 2020-06-24 11-23-35](https://user-images.githubusercontent.com/60679342/85491059-d30e9600-b60d-11ea-9820-845057a38199.png)
 
-
-- string type대신 text형식을 써야함
+   string type대신 text형식을 써야함  
+   
+- aggregations만 사용할때 "size: 0"을 지정하면 hits에 불필요한 문서    
 
 
    
