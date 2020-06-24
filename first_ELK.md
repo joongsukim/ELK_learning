@@ -105,7 +105,9 @@
     
 - multisearch나 bulk파일을 인덱스에 추가시킬 경우 -d 옵션의 full name인 --data-binary을 써줘야함(-d를 사용할 경우 오류 발생 ) 
 
-- 맵핑을 할경우 맵핑하려는 필드중에서 type이 string인 경우 아래와 같은 오류가 생김 
+- 맵핑을 할경우 맵핑하려는 필드중에서 type이 string인 경우 아래와 같은 오류가 생김   
+![Screenshot from 2020-06-24 11-23-35](https://user-images.githubusercontent.com/60679342/85491059-d30e9600-b60d-11ea-9820-845057a38199.png)
+
 
 - string type대신 text형식을 써야함
    
