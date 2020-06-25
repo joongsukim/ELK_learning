@@ -13,7 +13,8 @@
    <img width="671" alt="스크린샷 2020-06-25 오후 5 48 08" src="https://user-images.githubusercontent.com/60679342/85687847-32eb6680-b70c-11ea-9bdb-cf13c8e003f5.png">
    
    ### 카프카를 사용할 경우
-   
+   <img width="528" alt="스크린샷 2020-06-25 오후 5 47 26" src="https://user-images.githubusercontent.com/60679342/85688150-747c1180-b70c-11ea-843b-c6b650028929.png">
+
    
    
    
