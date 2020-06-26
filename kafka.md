@@ -33,6 +33,9 @@
    
    - partition 안에 저장된 데이터는 사전에 정의된 시간이나 용량을 넘어서면 삭제
    
+   ## Broker 
+   
+   
    ## kafka producer
    
    ### kafka producer의 역할
@@ -44,3 +47,51 @@
    - 전송 실패할 경우 재전송 가능
    
    
+   ## kafka consumer
+   
+   ### kafka comsumer의 역할
+    
+    - topic의 partition으로부터 데이터 polling(데이터를 가져오는 것)
+    
+    - Partition offset 위치 기록 
+      offset: partition에 있는 데이터 번호 
+    
+    - consuemr가 오류로 polling을 중지하더라도 추후에 offset을 이용하여 복구가능 
+    
+   ## Lag
+   
+   - 모니터링 지표중 하나
+    
+   - producer의 offset - comsumer의 offset의 차이를 기반으로 함
+   
+   - partition들 각각 lag값이 있으며 해당 토픽의 lag값들 중에서 가장 높은 값을 record-lag-max를 부름
+   
+   - Kafka consumer객체를 이용하여 현재 lag정보를 얻을 수 있는데 , record-lag-max값만 가져올 수 있으므로 해당 토픽의 다른 partition의 정상 작동은 파악하기 어려움 
+   
+   - Burrow를 사용하면 모든 lag값들의 정보를 파악 가능 
+    
+    
+   ## Burrow
+   
+   - Apache 에서 내놓은 consumer log를 효과적으로 모니터링하기 위해 내놓은 오픈소스
+   
+   - go 언어로 제작
+   
+   ### Burrow의 특징
+   
+   - Multi Kafka cluster 지원: Kafka Cluster안에 있는 수 많은 partition들의 Lag정보를 burrow application 하나로 모니터링 가능 
+   
+   - Sliding window(센네에서 배운거 같이 어떤 일정한 범위를 유지하면서 이동)를 활용한 consumer의 status 확인: burrow는 수많은 consumer들의 상태를 error warning ok의 상태로 표현가능하게    만듬
+   
+     - warning상태 : producer의 데이터 전송 속도가 consumer의 데이터를 받는 속도보다 빨라서 lag값이 증가하는 경우
+     
+     - error상태: producer의 데이터를 전송하여서 producer의 offset값은 증가하는데 consumer은 데이터를 받지 않을 경우
+     
+     - ok상태 : 양쪽 모두 원할한 상태
+   
+   - http api 지원: 가장 널리 사용하는 http api를 제공함으로써 다양한 추가 생태계 구현 가능 
+   
+   
+   
+   
+    
