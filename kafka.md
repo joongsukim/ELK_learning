@@ -8,11 +8,11 @@
    
    - 다양한 곳에서 들어온 각각의 다른 데이터를 한 곳에서 실시간으로 관리 가능 
    
-   ### 카프카를 안 사용할 경우
+   ### kafka를 안 사용할 경우
    
    <img width="671" alt="스크린샷 2020-06-25 오후 5 48 08" src="https://user-images.githubusercontent.com/60679342/85687847-32eb6680-b70c-11ea-9bdb-cf13c8e003f5.png">
    
-   ### 카프카를 사용할 경우
+   ### kafka를 사용할 경우
    <img width="528" alt="스크린샷 2020-06-25 오후 5 47 26" src="https://user-images.githubusercontent.com/60679342/85688150-747c1180-b70c-11ea-843b-c6b650028929.png">
    
    다양한 곳에서 흘러들어온 데이터를 한 곳에서 관리할 수 있고 해당 데이터를 다른 프로그램들이 여러 곳에서 다운 받을 필요없이 kafka라는 거대한 큐에서 받을 수 있음
@@ -34,6 +34,14 @@
    - partition 안에 저장된 데이터는 사전에 정의된 시간이나 용량을 넘어서면 삭제
    
    ## Broker 
+   - kafka를 설치되어있는 서버 단위
+   
+   - 사용할때 보통 3개의 Broker를 구성
+   
+   - Replication: 같은 데이터를 저장하는 partition의 갯수를 의미
+   
+   - replication은 broker의 갯수보다 클 수 없음 
+   
    
    
    ## kafka producer
