@@ -41,7 +41,22 @@
    - Replication: 같은 데이터를 저장하는 partition의 갯수를 의미
    
    - replication은 broker의 갯수보다 클 수 없음 
+   ## Replication
    
+   - leader partition:producer이 전송하는 데이터를 받는 partition
+   
+   - follower partition : leader partition의 데이터를 복사해서 저장
+   
+   - 위의 두 partition을 ISR(In-Sync-Partition)이라 부름
+   
+   - 만약 learder partiton에 오류가 발생하여 기능을 수행하지 못할 경우 follower partiton이 leader partition의 역할을 대신 수행
+   
+   - Producer에는 ack이라는 옵션으로 ISR에 대한 신뢰성있는 전송을 보장 
+     - 0일경우 : 아무런 응답메세지를 받지 않음 --> 대신 속도가 빠름
+     
+     - 1일경우 : Leader partition에 대한 정상작동을 확인 가능 , 하지만 follower partition에 대한 정상 작동은 확인 불가
+     
+     - 2일경우 : 모든 partiton에 대한 정상 
    
    
    ## kafka producer
