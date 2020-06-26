@@ -51,12 +51,12 @@
    
    ### kafka comsumer의 역할
     
-    - topic의 partition으로부터 데이터 polling(데이터를 가져오는 것)
+   - topic의 partition으로부터 데이터 polling(데이터를 가져오는 것)
     
-    - Partition offset 위치 기록 
+   - Partition offset 위치 기록 
       offset: partition에 있는 데이터 번호 
     
-    - consuemr가 오류로 polling을 중지하더라도 추후에 offset을 이용하여 복구가능 
+   - consuemr가 오류로 polling을 중지하더라도 추후에 offset을 이용하여 복구가능 
     
    ## Lag
    
@@ -73,7 +73,7 @@
     
    ## Burrow
    
-   - Apache 에서 내놓은 consumer log를 효과적으로 모니터링하기 위해 내놓은 오픈소스
+   - Apache 에서 내놓은 consumer lg를 효과적으로 모니터링하기 위해 내놓은 오픈소스
    
    - go 언어로 제작
    
