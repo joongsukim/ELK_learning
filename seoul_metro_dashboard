@@ -41,3 +41,16 @@
 ### 1호선~5호선 , 6호선 ~9호선 역별 전화번호부 저장 
 
 - json파일로 다운 후 source directory 에 저장 
+
+
+### 파일 변환 프로그램 실행
+
+`elastic-demos/seoul-metro-logs` 경로 에서 npm 패키지를 설치합니다.
+```
+npm install
+```
+
+변환 프로그램을 실행합니다.
+```
+node bin/run.js
+```
