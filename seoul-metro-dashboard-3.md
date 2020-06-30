@@ -1,4 +1,4 @@
-## google analytics사용하기
+
 
 ## timestamp 필드에서  기록시간 추출하기 
 
@@ -34,9 +34,17 @@
 - x축 ,y축을 나누어서 x축은 시간대별 y축은 요일로 구분 
 
 
+## 파이프라인 생성
 
+- logstash 와 같은 기능
 
+- 파이프라인을 통해 특정 필드로부터 새로운 필드 추출 
 
+<img width="658" alt="파이프라인 쿼리" src="https://user-images.githubusercontent.com/60679342/86076507-262c9100-bac5-11ea-9a6a-8b314ed15ee6.png">
+
+- ctx를 사용하고 @datastamp같은 경우에는 특수문자가 포함되어 있어서 ['timestamp']형식
+
+- 해당 파이프라인을 만든뒤 reindex로 해당 필드를 추가시킨 인덱스를 생성 
 
 
 
