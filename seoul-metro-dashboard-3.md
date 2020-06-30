@@ -46,6 +46,8 @@
 
 - 해당 파이프라인을 만든뒤 reindex로 해당 필드를 추가시킨 인덱스를 생성 
 
+- reindex문 안에 pipeline을 추가 
+
 
 
 ### google analytics란?
