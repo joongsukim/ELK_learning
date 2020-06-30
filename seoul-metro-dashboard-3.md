@@ -10,7 +10,7 @@
 
   - 하루 24시간중에 해당 시간대만 추출하는 script
   
-  - "lang": "SCRIPT"는 default이므로 안써도 가능
+  - "lang": "PAINLESS"는 default이므로 안써도 가능
   
   - "source" 필드에 함수를 생성(timestamp의 value값을 추출해서 getHourOfDay()함수를 통해서 시간대 추출 )
 
