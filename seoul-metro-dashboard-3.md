@@ -21,6 +21,9 @@
 
 - def 부분만 가져와서 index pattern에 script fields에 추가
 
+<img width="641" alt="요일 만드는 해당 쿼리" src="https://user-images.githubusercontent.com/60679342/86074719-7144a500-bac1-11ea-9516-d172265f1f61.png">
+
+
 - 위와같은 방법으로 요일도 분리
 
 
