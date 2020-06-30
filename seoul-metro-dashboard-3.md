@@ -3,7 +3,14 @@
 ## timestamp 필드에서  기록시간 추출하기 
 
 
+<img width="485" alt="hour of day 필드 생성" src="https://user-images.githubusercontent.com/60679342/86073090-0e054380-babe-11ea-8068-1360e449977d.png">
 
+- dev tool에서 위와 같은 쿼리를 이용해서 hour of day라는 필드를 생성
+
+
+<img width="485" alt="hour of day 필드 생성" src="https://user-images.githubusercontent.com/60679342/86073090-0e054380-babe-11ea-8068-1360e449977d.png">
+
+- 결과값을 보면 시간대가 추출된 것을 확인 
 
 
 
