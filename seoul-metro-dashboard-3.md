@@ -26,6 +26,12 @@
 
 - 위와같은 방법으로 요일도 분리
 
+- 만든 script필드로 heat map 생성 
+
+<img width="998" alt="heat map " src="https://user-images.githubusercontent.com/60679342/86075744-ab16ab00-bac3-11ea-9e76-86b7c33c238b.png">
+
+
+- x축 ,y축을 나누어서 x축은 시간대별 y축은 요일로 구분 
 
 
 
