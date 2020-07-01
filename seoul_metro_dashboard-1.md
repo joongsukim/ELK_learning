@@ -54,5 +54,33 @@ npm install
 ```
 node bin/run.js
 ```
-### 변환 프로그램을 한후 
+### 변환 프로그램을 한후
+
+logstash 사용 
+
+
+input {
+  file {
+    path => "/Users/joongsu/desktop/elastic/elastic-demos/seoul-metro-logs/data/seoul-metro-2018.logs"
+    codec => "json"
+    start_position => "beginning"
+    sincedb_path => "/dev/null" 
+  }
+}
+
+filter {
+  mutate {
+    remove_field => ["host","path","@version"]
+  }
+}
+
+output {
+
+
+ elasticsearch {
+    hosts => "localhost"
+    index => "seoul-metro-logs-2018"
+ }
+}
+
 
