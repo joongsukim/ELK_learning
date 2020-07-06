@@ -18,6 +18,12 @@
 
 -app들은 관심있는 topic을 구성하거나 발행
 
+## MQTT broker 
+
+- publisher와 subscriber들이 서로 메세지를 주고받을 수 있게 중계해주는 역할 
+
+- 종류: Mosquitto , HiveMQ , mosca , ActiveMQ, RabbitMQ 
+
 ## MQTT QoS 
 
 
