@@ -16,7 +16,7 @@
 
 - 슬래시를 이용해서 계층적으로 구성  (예: 하드디스크의 상태 측정 메세지를 위한 topic -> /sensors/node_name/temperature/harddisk)
 
--app들은 관심있는 topic을 구성하거나 발행
+- app들은 관심있는 topic을 구성하거나 발행
 
 ## MQTT broker 
 
