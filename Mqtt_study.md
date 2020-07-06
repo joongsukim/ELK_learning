@@ -10,8 +10,13 @@
 
 <img width="565" alt="스크린샷 2020-07-06 오전 11 43 58" src="https://user-images.githubusercontent.com/60679342/86550696-0cd08c80-bf7e-11ea-8fb4-30b955e144fc.png">
 
+## 토픽 
 
+- pub과 sub은 토픽을 기준으로 작동
 
+- 슬래시를 이용해서 계층적으로 구성  (예: 하드디스크의 상태 측정 메세지를 위한 topic -> /sensors/node_name/temperature/harddisk)
+
+-app들은 관심있는 topic을 구성하거나 발행
 
 ## MQTT QoS 
 
